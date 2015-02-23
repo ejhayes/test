@@ -1,4 +1,9 @@
 image: dockerfile/nginx
 script:
   - echo hello world
-
+  - whoami
+  - pwd
+  - hostname
+  - env
+  - sleep 8
+  - echo bye
