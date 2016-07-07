@@ -1,4 +1,4 @@
 node {
-  sh "echo this test5"
+  sh "echo this test6"
   sh "echo ${deploymentBucket}"
 }
