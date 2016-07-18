@@ -32,7 +32,7 @@ checkout scm
   // Staging Environment
   stage 'Deploy Staging'
   
-build job: 'deploy-codedeploy', parameters: [
+build job: 'aws-codedeploy-deployment', parameters: [
   [$class: 'StringParameterValue', name: 'codedeployApp', value: "stage-${projectBaseName}"], 
   [$class: 'StringParameterValue', name: 'codedeployRegion', value: projectRegion], 
   [$class: 'StringParameterValue', name: 'deploymentPackage', value: "${projectBaseName}/${env.BUILD_TAG}.zip"], 
