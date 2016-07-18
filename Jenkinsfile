@@ -13,6 +13,8 @@ node {
   // Build commands here (--no-progress can be added)
   //sh "bash build.sh"
   sh 'echo building...'
+  sh 'ls -l'
+  sh 'pwd'
 
   // Archive the output 
   stage 'Archive'
