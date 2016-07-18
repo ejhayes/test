@@ -38,7 +38,8 @@ build job: 'aws-codedeploy-deployment', parameters: [
   [$class: 'StringParameterValue', name: 'deploymentPackage', value: "${projectBaseName}/${env.BUILD_TAG}.zip"], 
   [$class: 'StringParameterValue', name: 'codedeployConfig', value: 'CodeDeployDefault.OneAtATime'], 
   [$class: 'StringParameterValue', name: 'deploymentBucket', value: deploymentBucket],
-  [$class: 'StringParameterValue', name: 'deploymentDescription', value: "Promotion from Jenkins: ${env.BUILD_URL}"]
+  [$class: 'StringParameterValue', name: 'deploymentDescription', value: "Promotion from Jenkins: ${env.BUILD_URL}"],
+  [$class: 'StringParameterValue', name: 'slackChannel', value: slackChannel]
 ]
 
   // production deployment
