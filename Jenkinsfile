@@ -5,10 +5,13 @@ node {
 
   // Get some code from a GitHub repository
   //checkout([$class: 'GitSCM', branches: [[name: '*/feature-automated-deployments']], doGenerateSubmoduleConfigurations: false, extensions: [[$class: 'CleanBeforeCheckout']], submoduleCfg: [], userRemoteConfigs: [[credentialsId: gitCredentialsId, url: gitRepo]]])
+stage 'Checkout'
 
+checkout scm
 
   // Mark the code build 'stage'....
   stage 'Build'
+  
   
   // Build commands here (--no-progress can be added)
   //sh "bash build.sh"
